@@ -34,3 +34,9 @@ function playDrum(letter) {
     audio.play();
 }
 construc();
+
+// ON PRESS
+window.addEventListener('keydown', handleKeyEvents);
+function handleKeyEvents(event){
+    playDrum(event.key.toUpperCase());
+}
