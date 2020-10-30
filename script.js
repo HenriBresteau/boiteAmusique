@@ -22,7 +22,7 @@ function construc() {
 
         document.getElementById('musicBox').appendChild(keyDiv);
         keyDiv.addEventListener('click', function(event){
-            let letter = event.currentTarget.querySelecto('h2').textContent;
+            let letter = event.currentTarget.querySelector('h2').textContent;
             playDrum(letter);
         })
     }
