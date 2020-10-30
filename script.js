@@ -11,6 +11,6 @@ const data = {
 };
 function playDrum(letter) {
     const audio = new Audio();
-    audio.src = data.[letter].sound;
+    audio.src = data[letter].sound;
     audio.play();
 }
