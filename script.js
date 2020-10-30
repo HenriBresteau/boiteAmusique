@@ -9,8 +9,28 @@ const data = {
     'V': {sound: 'media/sounds/electro1.mp3'},
     'B': {sound: 'media/sounds/electro2.mp3'},
 };
+
+function construc() {
+    for(const letter in data){
+        console.log(letter);
+        const keyDiv = document.createElement('div');
+        keyDiv.classList.add('drum');
+
+        let h2 = document.createElement('h2');
+        h2.textContent = letter;
+        keyDiv.appendChild(h2);
+
+        document.getElementById('musicBox').appendChild(keyDiv);
+        keyDiv.addEventListener('click', function(event){
+            let letter = event.currentTarget.querySelecto('h2').textContent;
+            playDrum(letter);
+        })
+    }
+}
+
 function playDrum(letter) {
     const audio = new Audio();
     audio.src = data[letter].sound;
     audio.play();
 }
+construc();
