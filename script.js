@@ -9,3 +9,8 @@ const data = {
     'V': {sound: 'media/sounds/electro1.mp3'},
     'B': {sound: 'media/sounds/electro2.mp3'},
 };
+function playDrum(letter) {
+    const audio = new Audio();
+    audio.src = data.[letter].sound;
+    audio.play();
+}
